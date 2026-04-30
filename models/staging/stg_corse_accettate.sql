@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('raw_rides_source', 'corse_accettate') }}

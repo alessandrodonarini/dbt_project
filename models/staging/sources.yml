@@ -1,0 +1,15 @@
+version: 2
+sources:
+  - name: raw_rides_source
+    database: eco-rune-459817-m9
+    schema: raw_rides
+    tables:
+      - name: corse
+      - name: corse_richieste
+      - name: corse_accettate
+      - name: corse_iniziate
+      - name: corse_completate
+      - name: corse_cancellate
+      - name: clienti
+      - name: riders
+      - name: locali

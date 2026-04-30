@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fact_corse
+    columns:
+      - name: id_corsa
+        tests:
+          - unique
+          - not_null
+      - name: id_cliente
+        tests:
+          - not_null
+          - relationships:
+              arguments:    
+                to: ref('dim_clienti')
+                field: id_cliente
+
+  - name: dim_clienti
+    columns:
+      - name: id_cliente
+        tests:
+          - unique
+          - not_null
+
+  - name: flat_corse
+    columns:
+      - name: id_corsa
+        tests:
+          - unique
+          - not_null
