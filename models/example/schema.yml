@@ -1,6 +1,0 @@
-version: 2
-
-models:
-    - name: primalez
-      description: "A starter dbt model"
-
