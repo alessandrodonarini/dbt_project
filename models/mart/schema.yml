@@ -1,30 +1,24 @@
 version: 2
 
 models:
-  - name: fact_corse
+  - name: dim_utenti
+  - name: dim_piani
+  - name: dim_metodi
+  - name: dim_coupon
+
+  - name: fct_ordini
     columns:
-      - name: id_corsa
-        tests:
+      - name: id_ordine
+        data_tests:
           - unique
           - not_null
-      - name: id_cliente
-        tests:
-          - not_null
-          - relationships:
-              arguments:    
-                to: ref('dim_clienti')
-                field: id_cliente
-
-  - name: dim_clienti
-    columns:
-      - name: id_cliente
-        tests:
-          - unique
+      - name: data_ordine
+        data_tests:
           - not_null
 
-  - name: flat_corse
+  - name: flat_ordini
     columns:
-      - name: id_corsa
-        tests:
+      - name: id_ordine
+        data_tests:
           - unique
           - not_null
